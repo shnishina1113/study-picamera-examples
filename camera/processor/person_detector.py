@@ -71,7 +71,7 @@ class PersonDetector(object):
             label = '{}: {:.2f}%'.format('Person', confidence * 100)
             cv2.rectangle(frame, (startX, startY), (endX, endY), (100, 255, 50), 2)
             y = startY - 15 if startY - 15 > 15 else startY + 15
-            cv2.putText(frame, label, (startX, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (50, 255, 100), 1)
+            cv2.putText(frame, label, (startX, y), cv2.FONT_HERSHEY_SIMPLEX, 0.5, (50, 255, 10), 1)
             count += 1
         
         if count > 0:
